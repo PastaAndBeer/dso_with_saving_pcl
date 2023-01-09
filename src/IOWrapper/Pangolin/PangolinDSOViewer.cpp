@@ -21,7 +21,8 @@
 * along with DSO. If not, see <http://www.gnu.org/licenses/>.
 */
 
-
+#include <chrono>
+#include <thread>
 
 #include "PangolinDSOViewer.h"
 #include "KeyFrameDisplay.h"
@@ -31,6 +32,7 @@
 #include "FullSystem/HessianBlocks.h"
 #include "FullSystem/FullSystem.h"
 #include "FullSystem/ImmaturePoint.h"
+
 
 
 namespace dso
@@ -299,7 +301,8 @@ void PangolinDSOViewer::run()
                     break;
                 }
 
-                boost::this_thread::sleep_for(boost::chrono::milliseconds(100));
+//                 boost::this_thread::sleep_for(boost::chrono::milliseconds(100));
+		    std::this_thread::sleep_for(std::chrono::milliseconds(100));
             }
 
 
@@ -334,7 +337,8 @@ void PangolinDSOViewer::run()
                     break;
                 }
 
-                boost::this_thread::sleep_for(boost::chrono::milliseconds(100));
+//                 boost::this_thread::sleep_for(boost::chrono::milliseconds(100));
+		    std::this_thread::sleep_for(std::chrono::milliseconds(100));
             }
 
 
